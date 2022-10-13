@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  h1 Create Your Card
+  form(method="POST" action="/card")
+    label(for="firstName") First:
+    input(type="text" name="firstName" id="firstName")
+
+    label(for="lastName") Last:
+    input(type="text" name="lastName" id="lastName")
+
+    label(for="type") Type:
+    select(name="type" id="type")
+    option(value = "Looser") Looser
+    option(value = "Mid") Mid
+    option(value = "Premium") Premium
+
+    label(for="dateOfBirth") Birthday:
+    input(type="date" name="dateOfBirth" id="dateOfBirth")
+
+    label(for="addressLine1") Where you live:
+    input(type="text" name="addressLine1" id="addressLine1")
+
+    label(for="addressLine2") There is no need for two houses but whatever:
+    input(type="text" name="addressLine2" id="addressLine2")
+
+    label(for="city") City:
+    input(type="text" name="city" id="city")
+
+    label(for="state") State:
+    input(type="state" name="state" id="state")
+    option(value = "California") CA
+    option(value = "Idaho") ID
+    option(value = "texas") TX
+
+    label(for"zip") Zip Code:
+    input(type="zip" name="zip" id="id")
+
+    button(type="submit" action="post") Create
